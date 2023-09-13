@@ -7,11 +7,10 @@ const Tab4: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 4</IonTitle>
+          <IonTitle>Alto risco</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <ExploreContainer name="Tab 4 page" />
       </IonContent>
     </IonPage>
   );
