@@ -1,18 +1,26 @@
 import React from 'react';
-import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/react';
-import './main.css'
+import {CardContainer, CardHeaderContainer, RiskLevel, RiskLevelText, BrankDiv, Logo, CardMainContainer, CardImage, CardTitle, CardSubTitle} from './styles'
+import logo from './../../images/logo.png'
+import image from './../../images/image01.jfif'
 
 function Card() {
   return (
-    <IonCard>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-      <IonCardHeader>
-        <IonCardTitle>Card Title</IonCardTitle>
-        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-      </IonCardHeader>
-
-      <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
-    </IonCard>
+    <>
+      <CardContainer>
+        <CardHeaderContainer>
+          <RiskLevel>
+            <RiskLevelText>Baixo Risco</RiskLevelText>
+          </RiskLevel>
+          <BrankDiv></BrankDiv>
+          <Logo src={logo}/>
+        </CardHeaderContainer>
+        <CardMainContainer>
+          <CardImage src={image}/>
+          <CardTitle>Defesa Civil de Barueri é reconhecida por projeto de redução de risco de desastres</CardTitle>
+          <CardSubTitle>A Defesa Civil de Barueri foi reconhecida pela Organização das Nações Unidas (ONU) pelo projeto de prevenção e redução de risco de desastres nas escolas públicas do município.</CardSubTitle>
+        </CardMainContainer>
+      </CardContainer>
+    </>
   );
 }
 export default Card;

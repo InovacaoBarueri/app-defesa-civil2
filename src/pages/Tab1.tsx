@@ -8,16 +8,12 @@ const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        
+          <IonToolbar>
+            <IonTitle>Alertas</IonTitle>
+          </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Alertas</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <Card/>
-        {/* <ExploreContainer name="Tab 1 page" /> */}
+        <Card></Card>
       </IonContent>
     </IonPage>
   );
