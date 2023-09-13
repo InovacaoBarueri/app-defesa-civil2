@@ -1,13 +1,11 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab4.css';
 
-const Tab4: React.FC = () => {
+const AlertasTempestades: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Alto risco</IonTitle>
+          <IonTitle>Alertas tempestades</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -16,4 +14,4 @@ const Tab4: React.FC = () => {
   );
 };
 
-export default Tab4;
+export default AlertasTempestades;

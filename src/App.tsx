@@ -12,14 +12,10 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import {home } from 'ionicons/icons';
 import Home from './pages/Home';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
-import Tab4 from './pages/Tab4';
+
 import rainyOutline from './images/rainy-outline.svg'
 import thermometerOutline from './images/thermometer-outline.svg';
 import warmingOutline from './images/warning-outline.svg'
-
-import './global.css'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -39,6 +35,9 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import AlertasTempestades from './pages/Alertas tempestades';
+import AlertasTemperatura from './pages/Alertas temperaturas';
+import AlertasAltoRisco from './pages/Alertas Alto Risco';
 
 setupIonicReact();
 
@@ -50,14 +49,14 @@ const App: React.FC = () => (
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/alertatempestade">
+            <AlertasTempestades />
           </Route>
-          <Route path="/tab3">
-            <Tab3 />
+          <Route path="/alertatemperatura">
+            <AlertasTemperatura />
           </Route>
-          <Route path="/tab4">
-            <Tab4 />
+          <Route path="/alertaltorisco">
+            <AlertasAltoRisco />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />
@@ -67,13 +66,13 @@ const App: React.FC = () => (
           <IonTabButton tab="home" href="/home">
             <IonIcon aria-hidden="true" icon={home} />
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="alertatempestade" href="/alertatempestade">
             <IonIcon aria-hidden="true" icon={rainyOutline} />
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
+          <IonTabButton tab="alertatemperatura" href="/alertatemperatura">
             <IonIcon aria-hidden="true" icon={thermometerOutline} />
           </IonTabButton>
-          <IonTabButton tab="tab4" href="/tab4">
+          <IonTabButton tab="alertaltorisco" href="/alertaltorisco">
             <IonIcon aria-hidden="true" icon={warmingOutline} />
           </IonTabButton>
         </IonTabBar>
