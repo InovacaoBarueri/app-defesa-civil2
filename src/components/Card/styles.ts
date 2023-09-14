@@ -14,7 +14,7 @@ export const CardHeaderContainer = styled.div`
     grid-template-columns: 3fr 2fr 1fr
 `
 
-export const RiskLevel = styled.div`
+export const RiskLevelMedium = styled.div`
     display: flex;
     width: 100%;
     height: 48px;
@@ -22,6 +22,26 @@ export const RiskLevel = styled.div`
     border-radius: 20px;
     background: #FA0;
 `
+
+export const RiskLevelHigh = styled.div`
+    display: flex;
+    width: 100%;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #FF0000;
+`
+
+export const RiskLevelLow = styled.div`
+    display: flex;
+    width: 100%;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #00FF00;
+`
+
+
 export const RiskLevelText = styled.p`
     display: flex;
     flex-direction: column;
