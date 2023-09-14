@@ -71,3 +71,24 @@ export const CardSubTitle = styled.h3`
     font-weight: 400;
     line-height: normal;
 `
+
+export const AffectedRegions = styled.p`
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    display: inline-block;
+    margin-right: 0.5rem;
+`
+
+export const CardAffectedRegions = styled.p`
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-block;
+`

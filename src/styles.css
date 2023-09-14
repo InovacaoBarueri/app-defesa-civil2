@@ -1,0 +1,10 @@
+.Menu {
+    width: 100%;
+    height: 85px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.HeaderContainer {
+    padding: 0rem;
+}
