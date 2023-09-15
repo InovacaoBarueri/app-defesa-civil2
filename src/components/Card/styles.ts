@@ -94,6 +94,7 @@ export const CardSubTitle = styled.h3`
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 1.5rem;
 `
 
 export const AffectedRegions = styled.p`

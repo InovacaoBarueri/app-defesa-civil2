@@ -19,7 +19,7 @@ const CardService = () => {
       "risk": "Institucional",
       "riskLevel": "Institutional",
       "title": "Defesa Civil de Barueri é reconhecida por projeto de redução de risco de desastres",
-      "subtitle": "A Defesa Civil de Barueri foi reconhecida pela Organização das Nações Unidas (ONU) pelo projeto de prevenção e redução de risco de desastres nas escolas públicas do município",
+      "subtitle": "A Defesa Civil de Barueri foi reconhecida pela Organização das Nações Unidas (ONU).",
       "affectedRegions": "Toda a região"
     }, "alerta2": {
       "image": "https://th.bing.com/th/id/R.d9a332af5b113614abdc96d4f3d112e6?rik=s8bZ0eUlgMM%2fAg&riu=http%3a%2f%2fdiariodealphaville.com.br%2fwordpress%2fwp-content%2fuploads%2f2020%2f02%2falerta-chuva.jpg&ehk=nBk%2btGRf5hneJzaMEDoxSBhOLbkROJagDjGQ4kTFvSo%3d&risl=&pid=ImgRaw&r=0",
@@ -40,7 +40,7 @@ const CardService = () => {
       "risk": "Alto Risco",
       "riskLevel": "High",
       "title": "Alerta de Furacão",
-      "subtitle": "Um furacão de categoria 4 está se aproximando da costa leste de Barueri. As autoridades locais emitiram um alerta de evacuação obrigatória para todas as áreas costeiras.",
+      "subtitle": "Um furacão de categoria 4 está se aproximando da costa leste de Barueri.",
       "affectedRegions": "Costa Leste de Barueri"
     }
   };
