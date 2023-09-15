@@ -41,6 +41,15 @@ export const RiskLevelLow = styled.div`
     background: #00FF00;
 `
 
+export const RiskLevelInstutional = styled.div`
+    display: flex;
+    width: 100%;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #2B41B7;
+`
+
 
 export const RiskLevelText = styled.p`
     display: flex;
@@ -61,11 +70,6 @@ export const RiskLevelText = styled.p`
 export const BrankDiv = styled.div`
 `
 
-export const Logo = styled.img`
-    height: 100%;   
-    width: auto;
-    border-radius: 49px;
-`
 
 export const CardMainContainer = styled.div`
     margin-top: 1.5rem;

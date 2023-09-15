@@ -1,5 +1,5 @@
 import React from 'react';
-import {CardContainer, CardHeaderContainer, RiskLevelMedium, RiskLevelText, BrankDiv, Logo, CardMainContainer, CardImage, CardTitle, CardSubTitle, AffectedRegions, CardAffectedRegions, RiskLevelHigh, RiskLevelLow} from './styles'
+import {CardContainer, CardHeaderContainer, RiskLevelMedium, RiskLevelText, BrankDiv, Logo, CardMainContainer, CardImage, CardTitle, CardSubTitle, AffectedRegions, CardAffectedRegions, RiskLevelHigh, RiskLevelLow, RiskLevelInstutional} from './styles'
 
 export const RiskLevel = (props:any) => {
   if(props.riskLevel == 'High') {
@@ -22,6 +22,13 @@ export const RiskLevel = (props:any) => {
       </RiskLevelLow>
     )
   }
+  else if (props.riskLevel == 'Institutional') {
+    return (
+      <RiskLevelInstutional>
+       < RiskLevelText>{props.risk}</RiskLevelText>
+      </RiskLevelInstutional>
+    )
+  }
 }
 
 function Card(props:any) {
@@ -31,7 +38,6 @@ function Card(props:any) {
         <CardHeaderContainer>
         <RiskLevel riskLevel={props.riskLevel} risk={props.risk}/>
           <BrankDiv></BrankDiv>
-          <Logo src={props.icon}/>
         </CardHeaderContainer>
         <CardMainContainer>
           <CardTitle>{props.title}</CardTitle>
