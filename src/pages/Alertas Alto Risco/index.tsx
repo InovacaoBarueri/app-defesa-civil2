@@ -1,7 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import icon from './../../images/logo.png'
 import Logo from '../../components/Logo';
-import CardHighLevelRiskService from '../../components/Card/service';
+import CardHighLevelRiskService from '../../components/Card/highRiskService';
 const AlertasAltoRisco: React.FC = () => {
   return (
     <IonPage>
