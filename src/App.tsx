@@ -2,7 +2,6 @@ import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
-  IonLabel,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
@@ -13,7 +12,6 @@ import { IonReactRouter } from '@ionic/react-router';
 import {home } from 'ionicons/icons';
 import Home from './pages/Home';
 
-import rainyOutline from './images/rainy-outline.svg'
 import thermometerOutline from './images/thermometer-outline.svg';
 import warmingOutline from './images/warning-outline.svg'
 
@@ -36,7 +34,7 @@ import './styles.css'
 
 /* Theme variables */
 import './theme/variables.css';
-import AlertasTemperatura from './pages/Alertas temperaturas';
+import PrevisaoTempo from './pages/Previsão do tempo';
 import AlertasAltoRisco from './pages/Alertas Alto Risco';
 
 setupIonicReact();
@@ -50,8 +48,8 @@ const App: React.FC = () => (
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route path="/alertatemperatura">
-            <AlertasTemperatura />
+          <Route path="/previsaotempo">
+            <PrevisaoTempo />
           </Route>
           <Route path="/alertaltorisco">
             <AlertasAltoRisco />
@@ -67,7 +65,7 @@ const App: React.FC = () => (
           <IonTabButton tab="alertaltorisco" href="/alertaltorisco">
             <IonIcon aria-hidden="true" icon={warmingOutline} />
           </IonTabButton>
-          <IonTabButton tab="alertatemperatura" href="/alertatemperatura">
+          <IonTabButton tab="alertatemperatura" href="/previsaotempo">
             <IonIcon aria-hidden="true" icon={thermometerOutline} />
           </IonTabButton>
         </IonTabBar>
