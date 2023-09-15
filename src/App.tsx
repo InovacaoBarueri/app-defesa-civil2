@@ -36,7 +36,6 @@ import './styles.css'
 
 /* Theme variables */
 import './theme/variables.css';
-import AlertasTempestades from './pages/Alertas tempestades';
 import AlertasTemperatura from './pages/Alertas temperaturas';
 import AlertasAltoRisco from './pages/Alertas Alto Risco';
 
@@ -50,9 +49,6 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           <Route exact path="/home">
             <Home />
-          </Route>
-          <Route exact path="/alertatempestade">
-            <AlertasTempestades />
           </Route>
           <Route path="/alertatemperatura">
             <AlertasTemperatura />
@@ -68,14 +64,11 @@ const App: React.FC = () => (
           <IonTabButton tab="home" href="/home">
             <IonIcon aria-hidden="true" icon={home} />
           </IonTabButton>
-          <IonTabButton tab="alertatempestade" href="/alertatempestade">
-            <IonIcon aria-hidden="true" icon={rainyOutline} />
+          <IonTabButton tab="alertaltorisco" href="/alertaltorisco">
+            <IonIcon aria-hidden="true" icon={warmingOutline} />
           </IonTabButton>
           <IonTabButton tab="alertatemperatura" href="/alertatemperatura">
             <IonIcon aria-hidden="true" icon={thermometerOutline} />
-          </IonTabButton>
-          <IonTabButton tab="alertaltorisco" href="/alertaltorisco">
-            <IonIcon aria-hidden="true" icon={warmingOutline} />
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
