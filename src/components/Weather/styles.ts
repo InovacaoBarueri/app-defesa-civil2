@@ -28,7 +28,7 @@ export const ClimateDay = styled.p`
 export const CurrentTemperature = styled.p`
     color: #FFF;
     font-family: Roboto;
-    font-size: 25px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -42,11 +42,17 @@ export const MinMaxText = styled.p`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-top: 0.5rem;
 `
 
 export const GridContainer = styled.div`
     display: grid; 
     grid-template-columns: 1fr 1fr;
+`
+
+export const GridContainer2 = styled.div`
+    display: grid; 
+    grid-template-columns: 1fr 1fr 2fr;
 `
 
 export const Climate = styled.p`
@@ -76,4 +82,45 @@ export const ClimateIcon = styled.img`
     width: 77px;
     height: 77px;
     margin-left: 1.5rem;
+`
+export const ClimatenInformations2 = styled.div`
+
+`
+
+export const GridContainer3 = styled.div`
+    display: grid;
+    margin: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+`
+
+export const MicroClimateContainer = styled.div`
+    border-radius: 20px;
+    border: 5px solid #000;
+    background: #2C2C2C;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 1rem;
+`
+
+export const MicroClimateText = styled.p`
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+`
+
+export const MicroMinMaxText = styled.p`
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 70%;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+`
+
+export const MicroClimateIcon = styled.img`
+    width: 100%;
+    height: auto;
 `
