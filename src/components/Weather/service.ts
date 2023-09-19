@@ -27,7 +27,7 @@ export const getPrevisao = async (): Promise<Previsao | null> => {
     const latitude = -23.5105611;
     const longitude = -46.8761653;
 
-    const resposta = await axios.get<{ current_weather: any, daily: any, hourly: any }>(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m,precipitation&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=America%2FSao_Paulo`);
+    const resposta = await axios.get<{ current_weather: any, daily: any, hourly: any }>(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m,precipitation,rain&daily=temperature_2m_max,rain_sum,temperature_2m_min,precipitation_sum&timezone=America%2FSao_Paulo`);
 
     const dados = resposta.data;
 
@@ -38,8 +38,8 @@ export const getPrevisao = async (): Promise<Previsao | null> => {
       max: dados.daily.temperature_2m_max.slice(1, 6).map((value: number) => Math.round(value)),
       climate: getClimateDescription(dados.current_weather.relativehumidity),
       climateIcon: '', // Defina a lógica para determinar o ícone do clima
-      rain: dados.current_weather.precipitation || 0, // Define 0 como valor padrão se a chuva não estiver disponível
-      moisture: dados.current_weather.relativehumidity || 0, // Define 0 como valor padrão se a umidade não estiver disponível
+      rain: dados.daily.rain_sum[0], // Define 0 como valor padrão se a chuva não estiver disponível
+      moisture: dados.hourly.relativehumidity_2m[0]|| 0, // Define 0 como valor padrão se a umidade não estiver disponível
       wind: Math.round(dados.current_weather.windspeed)
     };
 

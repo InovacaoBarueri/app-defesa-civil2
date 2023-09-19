@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react';
 import { getPrevisao } from './service'; 
 
 import climateIcon from './../../images/cloudy.png'
+import Ion_Progress_Bar from '../IonProgressBar';
 
 interface Previsao {
   currentDay: string;
@@ -47,7 +48,7 @@ export default function Weather() {
   
 
   if(!previsao) {
-    return <p>Carregando previsão...</p>
+    return <Ion_Progress_Bar />
   }
   
   const dataAtual = new Date();
@@ -70,7 +71,7 @@ export default function Weather() {
         <ClimateDay>Agora - {previsao.currentDay}</ClimateDay>
           <ClimateInformations>
             <ClimateInformationText>
-              Chuva: {previsao.rain}% <br />
+              Chuva: {previsao.rain}mm <br />
               Umidade: {previsao.moisture}% <br />
               Vento: {previsao.wind}km/h 
               </ClimateInformationText>
