@@ -89,7 +89,7 @@ export const ClimatenInformations2 = styled.div`
 
 export const GridContainer3 = styled.div`
     display: grid;
-    margin: 1.5rem;
+    margin: 1rem;
     grid-template-columns: 1fr 1fr;
 `
 
@@ -99,6 +99,7 @@ export const MicroClimateContainer = styled.div`
     background: #2C2C2C;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin-top: 1rem;
+    margin: .5rem;
 `
 
 export const MicroClimateText = styled.p`
@@ -118,6 +119,7 @@ export const MicroMinMaxText = styled.p`
     font-style: italic;
     font-weight: 700;
     line-height: normal;
+    margin-left: 0;
 `
 
 export const MicroClimateIcon = styled.img`

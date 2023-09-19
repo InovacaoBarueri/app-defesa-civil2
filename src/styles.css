@@ -8,3 +8,7 @@
 .HeaderContainer {
     padding: 0rem;
 }
+
+a {
+    text-decoration: none;
+}

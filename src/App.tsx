@@ -36,6 +36,7 @@ import './styles.css'
 import './theme/variables.css';
 import PrevisaoTempo from './pages/Previsão do tempo';
 import AlertasAltoRisco from './pages/Alertas Alto Risco';
+import CardPage from './pages/CardPage';
 
 setupIonicReact();
 
@@ -53,6 +54,9 @@ const App: React.FC = () => (
           </Route>
           <Route path="/alertaltorisco">
             <AlertasAltoRisco />
+          </Route>
+          <Route path="/cardpage">
+            <CardPage />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />

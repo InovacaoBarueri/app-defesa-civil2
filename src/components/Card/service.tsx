@@ -59,6 +59,7 @@ const CardService = () => {
           subtitle={element.subtitle}
           affectedRegions={element.affectedRegions}
           riskLevel={element.riskLevel}
+          
         />
         );
     }
