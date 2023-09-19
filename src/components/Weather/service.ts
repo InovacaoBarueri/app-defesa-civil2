@@ -38,8 +38,8 @@ export const getPrevisao = async (): Promise<Previsao | null> => {
       max: dados.daily.temperature_2m_max.slice(1, 6).map((value: number) => Math.round(value)),
       climate: getClimateDescription(dados.current_weather.relativehumidity),
       climateIcon: '', // Defina a lógica para determinar o ícone do clima
-      rain: dados.current_weather.precipitation,
-      moisture: dados.current_weather.relativehumidity,
+      rain: dados.current_weather.precipitation || 0, // Define 0 como valor padrão se a chuva não estiver disponível
+      moisture: dados.current_weather.relativehumidity || 0, // Define 0 como valor padrão se a umidade não estiver disponível
       wind: Math.round(dados.current_weather.windspeed)
     };
 
