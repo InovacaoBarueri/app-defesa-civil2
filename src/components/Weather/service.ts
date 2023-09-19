@@ -27,7 +27,7 @@ export const getPrevisao = async (): Promise<Previsao | null> => {
     const latitude = -23.5105611;
     const longitude = -46.8761653;
 
-    const resposta = await axios.get<{current_weather: any, daily: any, hourly: any}>(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m,precipitation&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=America%2FSao_Paulo`);
+    const resposta = await axios.get<{ current_weather: any, daily: any, hourly: any }>(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m,precipitation&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=America%2FSao_Paulo`);
 
     const dados = resposta.data;
 
@@ -53,5 +53,10 @@ export const getPrevisao = async (): Promise<Previsao | null> => {
   }
 }
 
-// Uso:
-const resultado = await getPrevisao();
+// Encapsule a chamada da função em uma função assíncrona
+async function main() {
+  const resultado = await getPrevisao();
+}
+
+// Chame a função principal para iniciar a execução
+main();
