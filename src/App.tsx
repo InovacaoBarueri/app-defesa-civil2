@@ -38,6 +38,34 @@ import PrevisaoTempo from './pages/Previsão do tempo';
 import AlertasAltoRisco from './pages/Alertas Alto Risco';
 import CardPage from './pages/CardPage';
 
+import OneSignal from 'onesignal-cordova-plugin';
+
+// Call this function when your app starts
+function OneSignalInit(): void {
+  // Uncomment to set OneSignal device logging to VERBOSE  
+  // OneSignal.Debug.setLogLevel(6);
+  
+  // Uncomment to set OneSignal visual logging to VERBOSE  
+  // OneSignal.Debug.setAlertLevel(6);
+
+  // NOTE: Update the init value below with your OneSignal AppId.
+  OneSignal.initialize("da314b1c-f12f-4059-8739-96a9a59d3568");
+  
+  
+  let myClickListener = async function(event) {
+        let notificationData = JSON.stringify(event);
+    };
+  OneSignal.Notifications.addEventListener("click", myClickListener);
+  
+
+  // Prompts the user for notification permissions.
+  //    * Since this shows a generic native prompt, we recommend instead using an In-App Message to prompt for notification permission (See step 7) to better communicate to your users what notifications they will get.
+  OneSignal.Notifications.requestPermission(true).then((accepted: boolean) => {
+    console.log("User accepted notifications: " + accepted);
+  });
+}
+
+OneSignalInit();
 setupIonicReact();
 
 const App: React.FC = () => (
@@ -77,5 +105,6 @@ const App: React.FC = () => (
     </IonReactRouter>
   </IonApp>
 );
+
 
 export default App;
