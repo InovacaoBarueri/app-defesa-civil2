@@ -1,29 +1,28 @@
 import React from 'react';
 import {CardContainer, CardHeaderContainer, RiskLevelMedium, RiskLevelText, BrankDiv, CardMainContainer, CardImage, CardTitle, CardSubTitle, AffectedRegions, CardAffectedRegions, RiskLevelHigh, RiskLevelLow, RiskLevelInstutional} from './styles'
-import CardPage from '../../pages/Home';
-
+ 
 export const RiskLevel = (props:any) => {
-  if(props.riskLevel == 'High') {
+  if(props.risk == 'high') {
     return (
     <RiskLevelHigh>
         <RiskLevelText>{props.risk}</RiskLevelText>
     </RiskLevelHigh>
 )}
-  else if (props.riskLevel == 'Medium') {
+  else if (props.risk == 'medium') {
     return (
       <RiskLevelMedium>
         <RiskLevelText>{props.risk}</RiskLevelText>
       </RiskLevelMedium>
     )  
   }
-  else if (props.riskLevel == 'Low') {
+  else if (props.risk == 'low') {
     return (
       <RiskLevelLow>
        < RiskLevelText>{props.risk}</RiskLevelText>
       </RiskLevelLow>
     )
   }
-  else if (props.riskLevel == 'Institutional') {
+  else if (props.risk == 'institutional') {
     return (
       <RiskLevelInstutional>
        < RiskLevelText>{props.risk}</RiskLevelText>
@@ -35,10 +34,10 @@ export const RiskLevel = (props:any) => {
 function Card(props:any) {
   return (
     <>
-    <a href="/cardpage">
+    <a href="/">
       <CardContainer>
         <CardHeaderContainer>
-        <RiskLevel riskLevel={props.riskLevel} risk={props.risk}/>
+        <RiskLevel riskLevel={props.risk}/>
           <BrankDiv></BrankDiv>
         </CardHeaderContainer>
         <CardMainContainer>

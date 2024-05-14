@@ -49,6 +49,7 @@ function OneSignalInit(): void {
   });
 }
 
+ 
 OneSignalInit();
 setupIonicReact();
 
@@ -64,12 +65,6 @@ const App: React.FC = () => (
           <Route path="/previsaotempo">
             <PrevisaoTempo />
           </Route>
-          <Route path="/alertaltorisco">
-            <AlertasAltoRisco />
-          </Route>
-          <Route path="/cardpage">
-            <CardPage />
-          </Route>
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
@@ -77,9 +72,6 @@ const App: React.FC = () => (
         <IonTabBar color='secondary' slot="bottom">
           <IonTabButton tab="home" href="/home">
             <IonIcon aria-hidden="true" icon={home} />
-          </IonTabButton>
-          <IonTabButton tab="alertaltorisco" href="/alertaltorisco">
-            <IonIcon aria-hidden="true" icon={warmingOutline} />
           </IonTabButton>
           <IonTabButton tab="alertatemperatura" href="/previsaotempo">
             <IonIcon aria-hidden="true" icon={thermometerOutline} />
