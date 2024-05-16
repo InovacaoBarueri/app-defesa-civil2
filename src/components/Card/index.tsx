@@ -34,7 +34,6 @@ export const RiskLevel = (props:any) => {
 function Card(props:any) {
   return (
     <>
-    <a href="/">
       <CardContainer>
         <CardHeaderContainer>
         <RiskLevel riskLevel={props.risk}/>
@@ -47,7 +46,6 @@ function Card(props:any) {
           <CardAffectedRegions><AffectedRegions>Regiões afetadas:  </AffectedRegions>{props.affectedRegions}</CardAffectedRegions>
         </CardMainContainer>
       </CardContainer>
-    </a>
     </>
   );
 }

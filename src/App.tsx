@@ -13,6 +13,8 @@ import {home } from 'ionicons/icons';
 import Home from './pages/Home';
 
 import thermometerOutline from './images/thermometer-outline.svg';
+import folderOpenOutline from './images/folder-open-outline.svg'
+import newspaperOutline from './images/newspaper-outline.svg'
 import warmingOutline from './images/warning-outline.svg'
 
 /* Core CSS required for Ionic components to work properly */
@@ -39,6 +41,8 @@ import AlertasAltoRisco from './pages/Alertas Alto Risco';
 import CardPage from './pages/CardPage';
 
 import OneSignal from 'onesignal-cordova-plugin';
+import HistoricoAlertas from './pages/Historico de Alertas';
+import Noticias from './pages/Noticias';
 
 // Call this function when your app starts
 function OneSignalInit(): void {
@@ -65,6 +69,12 @@ const App: React.FC = () => (
           <Route path="/previsaotempo">
             <PrevisaoTempo />
           </Route>
+          <Route path="/historicoalertas">
+            <HistoricoAlertas />
+          </Route>
+          <Route path="/noticias">
+            <Noticias />
+          </Route>
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
@@ -73,8 +83,14 @@ const App: React.FC = () => (
           <IonTabButton tab="home" href="/home">
             <IonIcon aria-hidden="true" icon={home} />
           </IonTabButton>
+          <IonTabButton tab="noticias" href="/noticias">
+            <IonIcon aria-hidden="true" icon={newspaperOutline} />
+          </IonTabButton>
           <IonTabButton tab="alertatemperatura" href="/previsaotempo">
             <IonIcon aria-hidden="true" icon={thermometerOutline} />
+          </IonTabButton>
+          <IonTabButton tab="historicoalertas" href="/historicoalertas">
+            <IonIcon aria-hidden="true" icon={folderOpenOutline} />
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

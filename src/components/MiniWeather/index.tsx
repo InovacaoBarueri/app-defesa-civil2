@@ -10,7 +10,7 @@ MicroMinMaxText,
 MinMaxText} from './styles';
 
 import { useEffect, useState } from 'react';
-import { getPrevisao } from './service'; 
+import { getPrevisao } from '../Weather/service'; 
 
 import climateIcon from './../../images/cloudy.png'
 import Ion_Progress_Bar from '../IonProgressBar';
@@ -33,7 +33,7 @@ interface Props {
   climateIcon: string;
 }
 
-export default function Weather() {
+export default function MiniWheater() {
 
   const [previsao, setPrevisao] = useState<Previsao | null>(null);
 
@@ -68,16 +68,9 @@ export default function Weather() {
       </GridContainer>
       <GridContainer>
         <ClimateDay>Agora - {previsao.currentDay}</ClimateDay>
-          <ClimateInformations>
-            <ClimateInformationText>
-              Chuva: {previsao.rain}mm <br />
-              Umidade: {previsao.moisture}% <br />
-              Vento: {previsao.wind}km/h 
-              </ClimateInformationText>
-          </ClimateInformations>
         </GridContainer>
 
-        <GridContainer2>
+       <GridContainer2>
           <ClimatenInformations2>
             <CurrentTemperature>
               {previsao.currentTemperature} °C
@@ -92,50 +85,8 @@ export default function Weather() {
         </GridContainer2>
       </ClimateContainer>
 
-      <GridContainer3>
-        <MicroClimateContainer>
-          <MicroClimateText>{datasDosProximos5Dias[0]}</MicroClimateText>
-            <GridContainer3>
-            <MicroMinMaxText>
-              Mín: {previsao.min[1]} °C <br></br>
-              Máx: {previsao.max[1]} °C
-            </MicroMinMaxText>
-            <MicroClimateIcon src={climateIcon}/>
-            </GridContainer3>
-        </MicroClimateContainer>
-        <MicroClimateContainer>
-          <MicroClimateText>{datasDosProximos5Dias[1]}</MicroClimateText>
-            <GridContainer3>
-            <MicroMinMaxText>
-              Mín: {previsao.min[2]} °C <br></br>
-              Máx: {previsao.max[2]} °C
-            </MicroMinMaxText>
-            <MicroClimateIcon src={climateIcon}/>
-            </GridContainer3>
-        </MicroClimateContainer>
-        <MicroClimateContainer>
-          <MicroClimateText>{datasDosProximos5Dias[2]}</MicroClimateText>
-            <GridContainer3>
-            <MicroMinMaxText>
-              Mín: {previsao.min[3]} °C <br></br>
-              Máx: {previsao.max[3]} °C
-            </MicroMinMaxText>
-            <MicroClimateIcon src={climateIcon}/>
-            </GridContainer3>
-        </MicroClimateContainer>
-        <MicroClimateContainer>
-          <MicroClimateText>{datasDosProximos5Dias[3]}</MicroClimateText>
-            <GridContainer3>
-            <MicroMinMaxText>
-              Mín: {previsao.min[4]} °C <br></br>
-              Máx: {previsao.max[4]} °C
-            </MicroMinMaxText>
-            <MicroClimateIcon src={climateIcon}/>
-            </GridContainer3>
-        </MicroClimateContainer>
-       
-      </GridContainer3>
-  </>
+     
+         </>
   );
 
 }
