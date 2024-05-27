@@ -38,7 +38,7 @@ export const RiskLevelLow = styled.div`
     height: 48px;
     flex-shrink: 0;
     border-radius: 20px;
-    background: #00FF00;
+    background: #32CD32;
 `
 
 export const RiskLevelInstutional = styled.div`

@@ -2,6 +2,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import icon from './../../images/logo.png'
 import Logo from '../../components/Logo';
 import CardService from '../../components/Card/service';
+import InstitucionalCardService from '../../components/Card/institucionalService';
 
 const Noticias: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const Noticias: React.FC = () => {
           </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <CardService/>
+        <InstitucionalCardService/>
       </IonContent>
     </IonPage>
   );
